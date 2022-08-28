@@ -43,7 +43,7 @@ urls = anglers_crawling.get_link(driver)
 print('リンク取得終了')
 
 print('スクレイピング開始')
-anglers_scraping.save_data(urls, startDate, endDate)
+anglers_scraping.save_data(urls, args[1], args[2])
 print('スクレイピング終了')
 
 driver.quit()
