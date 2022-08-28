@@ -21,9 +21,9 @@ startDate = datetime.datetime.strptime(args[1], '%Y%m%d').strftime("%Y/%m/%d")
 endDate = datetime.datetime.strptime(args[2], '%Y%m%d').strftime("%Y/%m/%d")
 
 options = webdriver.ChromeOptions()
-# options.add_argument("--headless")  # ヘッドレスで起動
+options.add_argument("--headless")  # ヘッドレスで起動
 options.add_argument('--no-sandbox') # 仮想環境下では、sandboxで起動すると失敗するので無効にする
-# options.add_argument('--disable-gpu') # ヘッドレスモードで起動するときに必要
+options.add_argument('--disable-gpu') # ヘッドレスモードで起動するときに必要
 options.add_argument('--window-size=1280,1024')  # 画面サイズの指定
 
 driver = webdriver.Chrome(options=options)
