@@ -92,4 +92,4 @@ def save_data(urls, startYMD, endYMD):
 
     df = pd.DataFrame(d_list)
     df = df.sort_values('chokaYMDHM')
-    df.to_csv(f'//app/data/choka_ {startYMD}_{endYMD}.csv', index=None, encoding='utf-8-sig')
+    df.to_csv(f'//app/data/choka_{startYMD}_{endYMD}.csv', index=None, encoding='utf-8-sig')
